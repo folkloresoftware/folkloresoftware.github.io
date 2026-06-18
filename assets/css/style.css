@@ -233,6 +233,7 @@ h3 {
 .hero-panel,
 .project-card,
 .service-card,
+.testimonial-card,
 .engagement-list article,
 .team-panel,
 .contact-panel {
@@ -302,7 +303,8 @@ h3 {
 }
 
 .service-grid,
-.project-grid {
+.project-grid,
+.testimonial-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
@@ -410,6 +412,39 @@ h3 {
   font-weight: 800;
 }
 
+.testimonial-card {
+  padding: 24px;
+}
+
+.testimonial-photo {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--soft);
+  object-fit: cover;
+}
+
+.testimonial-card blockquote {
+  margin: 0;
+}
+
+.testimonial-card blockquote p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.52;
+}
+
+.testimonial-name {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
 .engagement-grid,
 .about-grid {
   display: grid;
@@ -422,6 +457,11 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 14px;
+}
+
+.engagement-intro {
+  margin: 18px 0 0;
+  color: var(--muted);
 }
 
 .engagement-list article {
@@ -447,6 +487,22 @@ h3 {
 
 .team-panel p {
   max-width: 760px;
+}
+
+.partner-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.app-ready-logo {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  object-fit: cover;
 }
 
 .about-copy p {
@@ -504,6 +560,7 @@ h3 {
 
   .service-grid,
   .project-grid,
+  .testimonial-grid,
   .engagement-list {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -558,6 +615,7 @@ h3 {
 
   .service-grid,
   .project-grid,
+  .testimonial-grid,
   .engagement-list {
     grid-template-columns: 1fr;
   }
