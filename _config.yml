@@ -1,0 +1,11 @@
+title: Folklore Software
+description: Software consulting and contract engineering for teams that need iOS, Swift, web, backend, AI, and app modernization support.
+url: "https://folkloresoftware.com"
+logo: /assets/logo.png
+social:
+  name: Folklore Software LLC
+  links:
+    - https://rlziii.com/
+    - https://www.appready.dev/
+plugins:
+  - jekyll-seo-tag
