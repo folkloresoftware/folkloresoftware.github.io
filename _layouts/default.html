@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Richard L Zarth III">
+    {% seo %}
+    <link rel="stylesheet" href="/assets/css/style.css">
+    {% if page.url == "/" %}
+      {% include professional-service-schema.html %}
+    {% endif %}
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    {% include header.html %}
+
+    <main id="main">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>

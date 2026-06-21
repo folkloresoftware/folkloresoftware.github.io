@@ -233,6 +233,11 @@ h3 {
 .hero-panel,
 .project-card,
 .service-card,
+.summary-card,
+.service-detail,
+.process-list article,
+.project-detail-card,
+.contact-sidebar,
 .testimonial-card,
 .engagement-list article,
 .team-panel,
@@ -277,6 +282,27 @@ h3 {
   color: var(--muted);
 }
 
+.page-hero {
+  background:
+    linear-gradient(115deg, rgba(95, 127, 79, 0.14), rgba(255, 255, 255, 0.74) 52%, rgba(191, 107, 66, 0.1)),
+    var(--paper);
+  padding: 72px 0 64px;
+}
+
+.page-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.55fr);
+  gap: 44px;
+  align-items: end;
+}
+
+.page-hero p:last-child {
+  margin: 0;
+  color: #33424a;
+  font-size: clamp(1.08rem, 1.6vw, 1.28rem);
+  line-height: 1.5;
+}
+
 .section {
   scroll-margin-top: 100px;
   padding: 76px 0;
@@ -304,10 +330,30 @@ h3 {
 
 .service-grid,
 .project-grid,
-.testimonial-grid {
+.testimonial-grid,
+.summary-grid,
+.service-detail-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+}
+
+.summary-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.summary-card {
+  padding: 24px;
+}
+
+.summary-card h3,
+.summary-card p {
+  margin: 0;
+}
+
+.summary-card p {
+  margin-top: 10px;
+  color: var(--muted);
 }
 
 .service-card {
@@ -315,7 +361,8 @@ h3 {
   padding: 22px;
 }
 
-.service-card span {
+.service-card span,
+.service-detail span {
   display: grid;
   width: 42px;
   height: 42px;
@@ -340,12 +387,43 @@ h3 {
 }
 
 .service-card p,
+.service-detail p,
+.service-detail li,
+.process-list p,
 .project-body p,
 .engagement-list p,
 .about-copy p,
+.editorial-copy p,
 .team-panel p,
-.contact-panel p {
+.contact-panel p,
+.contact-sidebar li {
   color: var(--muted);
+}
+
+.service-detail-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.service-detail {
+  padding: 24px;
+}
+
+.service-detail h3,
+.service-detail p {
+  margin: 0;
+}
+
+.service-detail p {
+  margin-top: 12px;
+}
+
+.service-detail ul {
+  margin: 18px 0 0;
+  padding-left: 20px;
+}
+
+.service-detail li + li {
+  margin-top: 6px;
 }
 
 .project-card {
@@ -412,6 +490,35 @@ h3 {
   font-weight: 800;
 }
 
+.project-detail-list {
+  display: grid;
+  gap: 24px;
+}
+
+.project-detail-card {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.project-detail-card .project-visual {
+  min-height: 100%;
+  border-right: 1px solid var(--line);
+  border-bottom: 0;
+}
+
+.project-detail-card .project-body {
+  padding: 28px;
+}
+
+.project-detail-card h2 {
+  font-size: clamp(1.75rem, 2.4vw, 2.35rem);
+}
+
+.section-action {
+  margin-top: 28px;
+}
+
 .testimonial-card {
   padding: 24px;
 }
@@ -445,12 +552,30 @@ h3 {
   font-weight: 800;
 }
 
+.split-cta,
 .engagement-grid,
-.about-grid {
+.about-grid,
+.editorial-grid,
+.contact-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.55fr) minmax(320px, 0.85fr);
   gap: 44px;
   align-items: start;
+}
+
+.split-cta {
+  align-items: center;
+}
+
+.split-cta p,
+.editorial-copy p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.text-link {
+  font-weight: 800;
 }
 
 .engagement-list {
@@ -510,8 +635,30 @@ h3 {
   font-size: 1.08rem;
 }
 
+.process-list {
+  display: grid;
+  gap: 14px;
+}
+
+.process-list article {
+  padding: 22px;
+}
+
+.process-list h3,
+.process-list p {
+  margin: 0;
+}
+
+.process-list p {
+  margin-top: 8px;
+}
+
 .contact-section {
   padding-top: 0;
+}
+
+.contact-layout {
+  align-items: stretch;
 }
 
 .contact-panel {
@@ -523,6 +670,23 @@ h3 {
 
 .contact-panel p {
   max-width: 720px;
+}
+
+.contact-sidebar {
+  padding: 28px;
+}
+
+.contact-sidebar h2 {
+  font-size: clamp(1.65rem, 2.6vw, 2.25rem);
+}
+
+.check-list {
+  margin: 22px 0 0;
+  padding-left: 20px;
+}
+
+.check-list li + li {
+  margin-top: 10px;
 }
 
 .site-footer {
@@ -551,9 +715,13 @@ h3 {
 
 @media (max-width: 960px) {
   .hero-grid,
+  .page-hero-grid,
   .section-header,
+  .split-cta,
   .engagement-grid,
   .about-grid,
+  .editorial-grid,
+  .contact-layout,
   .team-panel {
     grid-template-columns: 1fr;
   }
@@ -561,8 +729,19 @@ h3 {
   .service-grid,
   .project-grid,
   .testimonial-grid,
+  .summary-grid,
+  .service-detail-grid,
   .engagement-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-detail-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail-card .project-visual {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
   }
 
   .hero-panel {
@@ -599,6 +778,10 @@ h3 {
     padding: 48px 0;
   }
 
+  .page-hero {
+    padding: 52px 0;
+  }
+
   h1 {
     font-size: clamp(2.45rem, 11vw, 3.2rem);
   }
@@ -616,6 +799,8 @@ h3 {
   .service-grid,
   .project-grid,
   .testimonial-grid,
+  .summary-grid,
+  .service-detail-grid,
   .engagement-list {
     grid-template-columns: 1fr;
   }

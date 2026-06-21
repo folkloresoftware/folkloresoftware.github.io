@@ -10,3 +10,10 @@ social:
     - https://www.appready.dev/
 plugins:
   - jekyll-seo-tag
+exclude:
+  - AGENTS.md
+  - SITE_REVAMP.md
+  - PLAN.md
+  - CONTENT_NOTES.md
+  - .agents/
+  - .codex/
