@@ -297,17 +297,17 @@ Confirmed training formats:
 - Pairing and coaching
 - Custom team training
 
-### `/projects`
+### `/work`
 
 Confirmed page.
 
-Use `/projects` for client-relevant proof, including case studies where enough public-safe detail is available.
+Use `/work` for client-relevant proof, including case studies where enough public-safe detail is available.
 
 Recommended approach:
 
 - Keep exactly three Recent Projects on the homepage.
 - Use this page for deeper project context.
-- Keep all project detail on one `/projects/` page in this pass.
+- Keep all project detail on one `/work/` page in this pass.
 - Full case-study pages are a future option only if there is enough public-safe detail and a later decision to split them out.
 
 Confirmed projects:
@@ -393,8 +393,8 @@ Keep the personal site compact.
 Recommended top nav:
 
 - Services
-- Training
-- Projects
+- Workshops
+- Work
 - About
 - Contact
 
@@ -406,8 +406,8 @@ Keep the primary CTA visible:
 Use clean directory-style URLs:
 
 - `/services/`
-- `/training/`
-- `/projects/`
+- `/workshops/`
+- `/work/`
 - `/about/`
 - `/contact/`
 
@@ -473,7 +473,7 @@ Use these defaults when implementing the Folklore Software revamp unless a later
 - Preserve the current custom `ProfessionalService` JSON-LD on the homepage unless a page-specific schema is clearly useful.
 - Use page-specific front matter titles and descriptions for SEO.
 - Add simple `sitemap.xml` and `robots.txt` files for crawler and Search Console discovery.
-- Keep the homepage concise and route deeper details into `/services/`, `/training/`, `/projects/`, `/about/`, and `/contact/`.
+- Keep the homepage concise and route deeper details into `/services/`, `/workshops/`, `/work/`, `/about/`, and `/contact/`.
 - Keep hidden testimonials in the homepage source, out of the navigation, and out of visible page flow until real testimonials are available.
 - Keep App Ready off the homepage in this pass. Mention App Ready only near the bottom of `/services/` and, if useful, briefly on `/contact/` as a routing option for larger work.
 - Use email-only contact paths throughout the site.
@@ -500,11 +500,11 @@ No remaining blocking questions are known before implementation.
 ### Phase 3: Folklore Software
 
 - Move from a mostly-single-page site to a stronger multi-page structure.
-- Start with `/`, `/services`, `/training`, `/projects`, `/about`, and `/contact`.
+- Start with `/`, `/services`, `/workshops`, `/work`, `/about`, and `/contact`.
 - Include App Ready as a short larger-team paragraph near the bottom of `/services`.
 - Use email as the primary contact method for now.
 - Use Circls Hangout, Mobile Safe Zones, and Lloyd's Glass Services as the three public project examples.
-- Keep `/projects` as one projects page for now; do not create individual case-study pages in this pass.
+- Keep `/work` as one work page for now; do not create individual case-study pages in this pass.
 - Emphasize iOS and Apple-platform engineering first, while presenting backend, web, AI, and tooling as practical full-stack support.
 - Do not create a Folklore blog; keep writing on `rlziii.com`.
 
@@ -532,16 +532,16 @@ Use these decisions when implementing the next pass:
 - Add `/consulting` to `rlziii.com`.
 - Move `presentations.html` to `/speaking`, preserving `/presentations` as a redirect or backward-compatible route if practical.
 - Move Folklore Software toward a clearer multi-page consulting site.
-- Folklore pages to build: `/`, `/services/`, `/training/`, `/projects/`, `/about/`, and `/contact/`.
+- Folklore pages to build: `/`, `/services/`, `/workshops/`, `/work/`, `/about/`, and `/contact/`.
 - Use clean directory-style URLs for the Folklore pages.
 - Use shared Jekyll layouts/includes for repeated site chrome, navigation, footer, analytics, and metadata behavior.
 - Make the Folklore homepage noticeably shorter than the current single-page site.
 - Folklore `/services` should emphasize iOS and Apple-platform development first, with backend, web, AI, and tooling presented as supporting full-stack range.
-- Folklore `/projects` should use Circls Hangout, Mobile Safe Zones, and Lloyd's Glass Services on one projects page.
+- Folklore `/work` should use Circls Hangout, Mobile Safe Zones, and Lloyd's Glass Services on one work page.
 - Do not create individual project/case-study pages in the next pass.
 - Circls Hangout, Mobile Safe Zones, and Lloyd's Glass Services can be mentioned publicly by name.
-- Folklore `/training` should cover workshops and internal teaching.
-- Folklore `/training` should support short workshops, multi-session internal training, architecture review sessions, pairing/coaching, and custom team training.
+- Folklore `/workshops` should cover workshops and internal teaching.
+- Folklore `/workshops` should support short workshops, multi-session internal training, architecture review sessions, pairing/coaching, and custom team training.
 - Folklore contact should use email for now.
 - Folklore should not have its own blog for now; writing should live on `rlziii.com`.
 - Keep App Ready secondary, used only for larger-team context.

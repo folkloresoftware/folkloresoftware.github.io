@@ -12,11 +12,11 @@ layout: null
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   </url>
   <url>
-    <loc>{{ site.url }}/training/</loc>
+    <loc>{{ site.url }}/workshops/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   </url>
   <url>
-    <loc>{{ site.url }}/projects/</loc>
+    <loc>{{ site.url }}/work/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   </url>
   <url>
